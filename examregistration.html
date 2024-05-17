@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="examregistration.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online examination registration</title>
+</head>
+<body>
+    <form action="connect.php" method="POST">
+        <p>FirstName: <input type="text" name="FirstName"></p>
+        <p>LastName: <input type="text" name="LastName"></p>
+        <p>Roll Number: <input type="number" name="RollNumber"></p>
+        <p>Department: 
+            <select name="Department">
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="Civil">Civil</option>
+                <option value="Mechanical">Mechanical</option>
+            </select>
+        </p>
+        <p>Email: <input type="email" name="Email"></p>
+        <p>Phone Number: <input type="number" name="pnumber"></p>
+        <p>Password: <input type="password" name="Password"></p>
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
+

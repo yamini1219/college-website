@@ -1,0 +1,82 @@
+/* styles.css */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://i.pinimg.com/1200x/97/58/32/97583207fb48ed643d89edea6ec51fe4.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* No repeating of the image */
+    background-position: center; /* Center the image */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: calc(100% - 24px); /* Adjusted width */
+    padding: 10px;
+    margin-bottom: 10px; /* Decreased margin */
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db; /* Highlight color */
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #3498db, #2c3e50); /* Gradient button */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Transition for button */
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #2c3e50, #3498db); /* Gradient hover effect */
+}
+
+input[type="submit"]:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+}
+
+label {
+    font-weight: bold;
+    color: #333; /* Dark text color */
+}

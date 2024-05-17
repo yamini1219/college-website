@@ -1,0 +1,25 @@
+<?php
+session_start();
+$RollNumber = $_POST['RollNumber'];
+$Password = $_POST['Password'];
+$conn = new mysqli('localhost', 'root', '', 'registrationdb');
+if ($conn->connect_error) { // Fixed the error here
+    die("Connection error: " . $conn->connect_error);
+} 
+$stmt = $conn->prepare("SELECT RollNumber, Password FROM registration WHERE RollNumber = ?");
+$stmt->bind_param("i", $RollNumber);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($result->num_rows == 1) {
+    $row = $result->fetch_assoc();
+    if (password_verify($Password, $row['Password'])) {
+        $_SESSION['RollNumber'] = $row['RollNumber'];
+        header("Location: www.google.com");
+        exit();
+    } else {
+        $error = "Incorrect Password";
+    }
+} else {
+    $error = "User NOT found";
+}
+?>
